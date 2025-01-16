@@ -5,6 +5,8 @@ import numpy as np
 import cv2
 import os
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
 app = Flask(__name__)
 CORS(app)  # Permite requisições de outros domínios (como o frontend)
 CORS(app, resources={r"/*": {"origins": ["http://localhost:5173"]}})
