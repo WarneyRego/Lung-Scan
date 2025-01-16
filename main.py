@@ -13,7 +13,8 @@ CORS(app, resources={r"/*": {"origins": ["http://localhost:5173"]}})
 
 
 # Verificar se o modelo existe antes de carregar
-MODEL_PATH = "keras_Model.h5"
+MODEL_PATH = "keras_model.h5"
+
 if not os.path.exists(MODEL_PATH):
     raise FileNotFoundError(f"O modelo '{MODEL_PATH}' não foi encontrado.")
 
